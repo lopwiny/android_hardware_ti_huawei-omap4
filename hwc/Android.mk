@@ -34,6 +34,10 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := hwcomposer.omap4
 LOCAL_C_INCLUDES += external/libpng external/zlib
 
+ifeq ($(TARGET_TI_HWC_HDMI_DISABLED),true)
+    LOCAL_CFLAGS += -DHDMI_DISABLED
+endif
+
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../edid/inc \
     $(LOCAL_PATH)/../include
