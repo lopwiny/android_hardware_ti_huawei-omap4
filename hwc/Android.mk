@@ -16,6 +16,10 @@ LOCAL_MODULE := hwcomposer.omap4
 LOCAL_CFLAGS := -DLOG_TAG=\"ti_hwc\" -Wall -Werror
 LOCAL_C_INCLUDES += external/libpng external/zlib
 
+ifeq ($(TARGET_TI_HWC_HDMI_DISABLED),true)
+    LOCAL_CFLAGS += -DHDMI_DISABLED
+endif
+
 LOCAL_C_INCLUDES += \
     $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
     $(LOCAL_PATH)/../edid/inc \
