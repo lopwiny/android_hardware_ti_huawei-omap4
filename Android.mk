@@ -1,5 +1,5 @@
 ifeq ($(TARGET_BOARD_PLATFORM),omap4)
-ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),omap4-next)
+ifeq ($(TARGET_BOARD_PLATFORM_VARIANT),omap4-front)
 
 LOCAL_PATH:= $(call my-dir)
 
