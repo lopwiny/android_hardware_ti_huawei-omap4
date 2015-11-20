@@ -65,4 +65,7 @@ BOARD_USES_SECURE_SERVICES := true
 # results in no cursors (mouse or otherwise) displayed on the screen.
 TARGET_DISABLE_CURSOR_LAYER := true
 
+# use FBIOPAN_DISPLAY instead of FBIOPUT_VSCREENINFO to refresh the display.
+TARGET_USE_PAN_DISPLAY := true
+
 BOARD_NO_INTRA_MACROBLOCK_MODE_SUPPORT := true
