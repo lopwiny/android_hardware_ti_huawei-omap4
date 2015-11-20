@@ -61,4 +61,8 @@ BOARD_SEPOLICY_DIRS += \
 # Misc
 BOARD_USES_SECURE_SERVICES := true
 
+# We don't support cursor layers, which when attempting to use them,
+# results in no cursors (mouse or otherwise) displayed on the screen.
+TARGET_DISABLE_CURSOR_LAYER := true
+
 BOARD_NO_INTRA_MACROBLOCK_MODE_SUPPORT := true
