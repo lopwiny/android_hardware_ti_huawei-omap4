@@ -72,7 +72,7 @@
 
 #define RPC_MSGPIPE_SIZE (4)
 #define RPC_MSG_SIZE_FOR_PIPE (sizeof(OMX_PTR))
-#define MAX_ATTEMPTS 15
+#define MAX_ATTEMPTS 60
 
 #define RPC_getPacket(nPacketSize, pPacket) do { \
     pPacket = TIMM_OSAL_Malloc(nPacketSize, TIMM_OSAL_TRUE, 0, TIMMOSAL_MEM_SEGMENT_INT); \
