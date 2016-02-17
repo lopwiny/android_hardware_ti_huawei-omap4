@@ -599,7 +599,7 @@ int CameraHal::setParameters(const android::CameraParameters& params)
             if (isParameterValid(valstr, mCameraProperties->get(CameraProperties::SUPPORTED_FOCUS_MODES))) {
                 CAMHAL_LOGDB("Focus mode set %s", valstr);
 
-#ifdef CAMERAHAL_TUNA
+#ifdef CAMERAHAL_TUNA || CAMERAHAL_HUAWEI_OMAP4
                 // FOCUS_MODE_CONTINUOUS_PICTURE and FOCUS_MODE_CONTINUOUS_VIDEO are the same in Tuna Ducati
                 // implementation (both point to OMX_IMAGE_FocusControlAuto), so setting / resetting the video
                 // mode based on this distinction achieves nothing but constant preview restarts. Don't bother
