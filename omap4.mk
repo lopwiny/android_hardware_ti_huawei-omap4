@@ -18,6 +18,6 @@
 PRODUCT_PACKAGES += \
     hwcomposer.omap4
 
-PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4_front/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/huawei-omap4/kernel-headers
 
-$(call inherit-product, hardware/ti/omap4_front/common.mk)
+$(call inherit-product, hardware/ti/huawei-omap4/common.mk)
