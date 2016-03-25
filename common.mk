@@ -46,3 +46,6 @@ PRODUCT_PACKAGES += \
 # compatiblity for older binaries
 PRODUCT_PACKAGES += \
     libcorkscrew
+
+PRODUCT_PACKAGES += \
+    keystore.omap4
