@@ -53,7 +53,6 @@ const int OMXCameraAdapter::SENSORID_OV8830 = 310;
 const int OMXCameraAdapter::SENSORID_OV2722 = 311;
 const int OMXCameraAdapter::SENSORID_OV9726 = 312;
 
-
 const int OMXCameraAdapter::FPS_MIN = 5;
 const int OMXCameraAdapter::FPS_MAX = 30;
 const int OMXCameraAdapter::FPS_MAX_EXTENDED = 60;
@@ -149,15 +148,16 @@ const CapResolution OMXCameraAdapter::mPreviewRes [] = {
 
 const CapResolution OMXCameraAdapter::mPreviewPortraitRes [] = {
     //Portrait resolutions
-    { 1088, 1920, "1088x1920" },
+    { 1080, 1920, "1080x1920" },
     { 720, 1280, "720x1280" },
+    { 720, 960, "720x960" },
     { 480, 800, "480x800" },
     { 576, 720, "576x720" },
-    { 576, 768, "576x768" },
     { 480, 720, "480x720" },
+    { 576, 768, "576x768" },
     { 480, 640, "480x640" },
-    { 288, 352, "288x352" },
     { 240, 320, "240x320" },
+    { 288, 352, "288x352" },
     { 160, 240, "160x240" },
     { 144, 176, "144x176" },
     { 120, 160, "120x160"},
@@ -167,6 +167,7 @@ const CapResolution OMXCameraAdapter::mPreviewPortraitRes [] = {
 const CapResolution OMXCameraAdapter::mPreviewResSS [] = {
    { 1920*2, 1080, "3840x1080" },
    { 1280*2,  720, "2560x720" },
+   {  960*2,  720, "1920x720" },
    {  800*2,  480, "1600x480" },
    {  720*2,  576, "1440x576" },
    {  720*2,  480, "1440x480" },
@@ -176,12 +177,14 @@ const CapResolution OMXCameraAdapter::mPreviewResSS [] = {
    {  352*2,  288, "704x288" },
    {  240*2,  160, "480x160" },
    {  176*2,  144, "352x144" },
+   {  160*2,  120, "320x120" },
    {  128*2,   96, "256x96" }
 };
 
 const CapResolution OMXCameraAdapter::mPreviewResTB [] = {
    { 1920, 1080*2, "1920x2160" },
    { 1280,  720*2, "1280x1440" },
+   {  960,  720*2, "1920x1440" },
    {  800,  480*2, "800x960" },
    {  720,  576*2, "720x1152" },
    {  720,  480*2, "720x960" },
@@ -191,6 +194,7 @@ const CapResolution OMXCameraAdapter::mPreviewResTB [] = {
    {  352,  288*2, "352x576" },
    {  240,  160*2, "240x320" },
    {  176,  144*2, "176x288" },
+   {  160,  120*2, "320x240" },
    {  128,   96*2, "128x192" },
 };
 
