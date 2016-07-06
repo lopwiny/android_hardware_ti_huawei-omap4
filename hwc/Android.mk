@@ -17,10 +17,13 @@ LOCAL_CFLAGS := -DLOG_TAG=\"ti_hwc\" -Wall -Werror
 LOCAL_C_INCLUDES += external/libpng external/zlib
 
 LOCAL_C_INCLUDES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
     $(LOCAL_PATH)/../edid/inc \
     $(LOCAL_PATH)/../include
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
+
 LOCAL_SHARED_LIBRARIES += libedid
 
-# LOG_NDEBUG=0 means verbose logging enabled
-# LOCAL_CFLAGS += -DLOG_NDEBUG=0
 include $(BUILD_SHARED_LIBRARY)

@@ -6,6 +6,7 @@ LOCAL_SRC_FILES:= \
 	memmgr_rpc.c
 
 LOCAL_C_INCLUDES += \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	$(LOCAL_PATH)/../inc \
 	$(LOCAL_PATH)/../../ \
 	$(LOCAL_PATH)/../../omx_rpc/inc \
@@ -15,6 +16,9 @@ LOCAL_C_INCLUDES += \
 	$(HARDWARE_TI_OMAP4_BASE)/tiler \
 	$(HARDWARE_TI_OMAP4_BASE)/syslink/syslink/d2c \
 	$(HARDWARE_TI_OMAP4_BASE)/syslink/syslink/api/include
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+        $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += -D_Android
 

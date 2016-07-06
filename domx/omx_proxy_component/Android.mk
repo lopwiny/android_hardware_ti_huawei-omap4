@@ -87,6 +87,7 @@ include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES += \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	$(LOCAL_PATH)/../omx_core/inc \
 	$(LOCAL_PATH)/../mm_osal/inc \
 	$(LOCAL_PATH)/../domx \
@@ -95,6 +96,9 @@ LOCAL_C_INCLUDES += \
 	$(LOCAL_PATH)/../domx/plugins/inc/ \
 	$(LOCAL_PATH)/omx_camera/inc/ \
 	frameworks/native/include/media/openmax
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_SHARED_LIBRARIES := \
 	libmm_osal \
