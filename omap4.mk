@@ -21,8 +21,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.omap4 \
     power.omap4
 
-PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4_front/kernel-headers
-
 # Init
 PRODUCT_COPY_FILES += \
     $(OMAP4_NEXT_FOLDER)/rootdir/init.omap4.rc:root/init.omap4.rc

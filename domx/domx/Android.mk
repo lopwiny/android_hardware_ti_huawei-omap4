@@ -15,6 +15,7 @@ LOCAL_SRC_FILES:= \
     plugins/memplugin_ion.c
 
 LOCAL_C_INCLUDES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
     $(LOCAL_PATH)/omx_rpc/inc \
     $(LOCAL_PATH)/../omx_core/inc \
     $(LOCAL_PATH)/../mm_osal/inc \
@@ -25,6 +26,9 @@ LOCAL_C_INCLUDES += \
     $(HARDWARE_TI_OMAP4_BASE)/../../libhardware/include \
     $(LOCAL_PATH)/plugins/inc/ \
     frameworks/native/include/media/openmax
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+    $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_CFLAGS += $(ANDROID_API_CFLAGS)
 LOCAL_CFLAGS += -D_Android -DENABLE_GRALLOC_BUFFERS -DUSE_ENHANCED_PORTRECONFIG -DANDROID_QUIRK_LOCK_BUFFER -DUSE_ION

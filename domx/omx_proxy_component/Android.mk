@@ -6,14 +6,17 @@ else
 	FRAMEWORKS_MEDIA_BASE := frameworks/base/include/media/stagefright
 endif
 
-
 TI_OMXPROXY_COMMON_INCLUDES := \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
 	$(LOCAL_PATH)/../omx_core/inc \
 	$(LOCAL_PATH)/../mm_osal/inc \
 	$(LOCAL_PATH)/../domx \
 	$(LOCAL_PATH)/../domx/omx_rpc/inc \
 	$(LOCAL_PATH)/../domx/plugins/inc/ \
 	frameworks/native/include/media/openmax
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 TI_OMXPROXY_DECODER_INCLUDES := \
 	$(HARDWARE_TI_OMAP4_BASE)/../../libhardware/include \
@@ -25,7 +28,6 @@ TI_OMXPROXY_ENCODER_INCLUDES := \
 	$(HARDWARE_TI_OMAP4_BASE)/hwc \
 	$(FRAMEWORKS_MEDIA_BASE) \
 	system/core/include/cutils
-
 
 TI_OMXPROXY_COMMON_CFLAGS := \
 	$(ANDROID_API_CFLAGS) \
@@ -60,7 +62,6 @@ TI_OMXPROXY_ENCODER_SHARED_LIBRARIES := \
 	libhardware \
 	libcutils
 
-
 #
 # libOMX.TI.DUCATI1.MISC.SAMPLE
 #
@@ -79,7 +80,6 @@ LOCAL_SRC_FILES := omx_sample/src/omx_proxy_sample.c
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.MISC.SAMPLE
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
-
 
 #
 # libOMX.TI.DUCATI1.VIDEO.DECODER
@@ -112,7 +112,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.DECODER
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
 
-
 #
 # libOMX.TI.DUCATI1.VIDEO.DECODER.secure
 #
@@ -136,7 +135,6 @@ LOCAL_SRC_FILES := omx_video_dec/src/omx_proxy_videodec_secure.c
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.DECODER.secure
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
-
 
 #
 # libOMX.TI.DUCATI1.VIDEO.CAMERA
@@ -178,7 +176,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.CAMERA
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
 
-
 #
 # libOMX.TI.DUCATI1.VIDEO.H264E
 #
@@ -201,7 +198,6 @@ LOCAL_SRC_FILES := omx_video_enc/src/omx_h264_enc/src/omx_proxy_h264enc.c
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.H264E
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
-
 
 #
 # libOMX.TI.DUCATI1.VIDEO.VC1E
@@ -226,7 +222,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.VC1E
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
 
-
 #
 # libOMX.TI.DUCATI1.VIDEO.H264SVCE
 #
@@ -250,7 +245,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.H264SVCE
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
 
-
 #
 # libOMX.TI.DUCATI1.VIDEO.MPEG4E
 #
@@ -273,7 +267,6 @@ LOCAL_SRC_FILES := omx_video_enc/src/omx_mpeg4_enc/src/omx_proxy_mpeg4enc.c
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE := libOMX.TI.DUCATI1.VIDEO.MPEG4E
 include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
-
 
 #
 # libOMX.TI.DUCATI1.VIDEO.H264E.secure
