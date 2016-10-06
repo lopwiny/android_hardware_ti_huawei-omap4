@@ -15,7 +15,7 @@
 # This file lists the modules that are specific to OMAP4 but are used by
 # all OMAP4 devices.
 
-OMAP4_NEXT_FOLDER := hardware/ti/omap4
+OMAP4_NEXT_FOLDER := hardware/ti/huawei-omap4
 
 PRODUCT_PACKAGES += \
     hwcomposer.omap4
