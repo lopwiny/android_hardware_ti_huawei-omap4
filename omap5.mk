@@ -19,4 +19,4 @@ PRODUCT_PACKAGES += \
     camera.omap5 \
     hwcomposer.omap5
 
-$(call inherit-product, hardware/ti/omap4_front/common.mk)
+$(call inherit-product, hardware/ti/huawei-omap4/common.mk)

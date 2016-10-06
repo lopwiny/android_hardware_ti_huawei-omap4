@@ -44,6 +44,6 @@ ADDITIONAL_BUILD_PROPERTIES += \
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.bq.gpu_to_cpu_unsupported=1
 
-$(call inherit-product, hardware/ti/omap4_front/common.mk)
+$(call inherit-product, hardware/ti/huawei-omap4/common.mk)
 $(call inherit-product-if-exists, vendor/ti/omap4/omap4-vendor.mk)
 $(call inherit-product-if-exists, vendor/widevine/omap4/widevine-vendor.mk)

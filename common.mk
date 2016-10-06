@@ -16,7 +16,7 @@
 # all OMAP4 devices.
 
 ifeq ($(ANDROID_API_LP_OR_LATER),true)
-DEVICE_PACKAGE_OVERLAYS += hardware/ti/omap4_front/overlay
+DEVICE_PACKAGE_OVERLAYS += hardware/ti/huawei-omap4/overlay
 endif
 
 PRODUCT_PACKAGES += \
