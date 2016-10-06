@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-OMAP4_NEXT_FOLDER := hardware/ti/omap4
+OMAP4_NEXT_FOLDER := hardware/ti/omap4_front
 
 # Processor
 TARGET_CPU_ABI := armeabi-v7a
@@ -21,7 +21,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_BOARD_PLATFORM := omap4
-TARGET_BOARD_PLATFORM_VARIANT := omap4-next
+TARGET_BOARD_PLATFORM_VARIANT := omap4-front
 TARGET_ARCH_VARIANT := armv7-a-neon
 
 # Graphics

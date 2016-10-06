@@ -21,7 +21,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.omap4 \
     power.omap4
 
-PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4/kernel-headers
+PRODUCT_VENDOR_KERNEL_HEADERS := hardware/ti/omap4_front/kernel-headers
 
 # Init
 PRODUCT_COPY_FILES += \
@@ -47,6 +47,6 @@ ADDITIONAL_BUILD_PROPERTIES += \
 ADDITIONAL_BUILD_PROPERTIES += \
     ro.bq.gpu_to_cpu_unsupported=1
 
-$(call inherit-product, hardware/ti/omap4/common.mk)
+$(call inherit-product, hardware/ti/omap4_front/common.mk)
 $(call inherit-product-if-exists, vendor/ti/omap4/omap4-vendor.mk)
 $(call inherit-product-if-exists, vendor/widevine/omap4/widevine-vendor.mk)
