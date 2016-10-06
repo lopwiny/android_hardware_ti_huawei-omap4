@@ -40,7 +40,7 @@ const char OMXCameraAdapter::DEFAULT_EXPOSURE_MODE[] = "auto";
 const char OMXCameraAdapter::DEFAULT_FLASH_MODE[] = "off";
 const char OMXCameraAdapter::DEFAULT_FOCUS_MODE_PREFERRED[] = "auto";
 const char OMXCameraAdapter::DEFAULT_FOCUS_MODE[] = "infinity";
-#ifndef MOTOROLA_CAMERA
+#if !defined(MOTOROLA_CAMERA) && !defined(CAMERAHAL_HUAWEI_OMAP4)
 const char OMXCameraAdapter::DEFAULT_IPP[] = "ldc-nsf";
 #else
 const char OMXCameraAdapter::DEFAULT_IPP[] = "off";
