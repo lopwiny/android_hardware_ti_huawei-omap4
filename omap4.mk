@@ -18,8 +18,7 @@
 OMAP4_NEXT_FOLDER := hardware/ti/omap4
 
 PRODUCT_PACKAGES += \
-    hwcomposer.omap4 \
-    power.omap4
+    hwcomposer.omap4
 
 # Init
 PRODUCT_COPY_FILES += \
