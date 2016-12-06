@@ -124,7 +124,7 @@ RPC_OMX_ERRORTYPE RPC_InstanceInit(__unused OMX_STRING cComponentName,
 	    "Malloc failed");
 	TIMM_OSAL_Memset(pRPCCtx, 0, sizeof(RPC_OMX_CONTEXT));
 
-#ifdef DOMX_TUNA
+#if defined(DOMX_TUNA) && defined(DOMX_HUAWEI_OMAP4)
 	// CMA-enabled kernel for tuna devices will unload Ducati firmware when
 	// it's not in use to free extra memory for applications. On the first
 	// access to /dev/rpmsg-omx1 it will reload the firmware. However, in
