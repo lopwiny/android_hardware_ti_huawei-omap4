@@ -27,4 +27,5 @@
 // uncomment the #define above and change the paths inside to match your requirements
 
 #define PATH_WHITELIST_EXTRA_H \
-    "/magisk/xposed/system/framework/XposedBridge.jar",
+    "/magisk/xposed/system/framework/XposedBridge.jar", \
+    "/system/framework/XposedBridge.jar",
